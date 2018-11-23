@@ -1,0 +1,31 @@
+{% if box is defined %}
+<h3>{{ box.name }}</h3>
+<p>Budget left per box: {{ box.budget }}</p>
+<p>Box content:</p>
+
+    {% if box.products is defined %}
+
+    {% for product in box.products %}
+        <ul class="list-group mx-auto" style="max-width: 50%;">
+            <li class="list-group-item">{{ product.name }} - {{ product.price }} $
+                <form action="{{ path('administration_current_box_choosing') }}" method="post">
+                    <input type="text" name="{{ product.reference }}" value="delete" placeholder="{{ product.reference }}" hidden>
+                    <button type="submit">X</button>
+                </form>
+            </li>
+        </ul>
+    {% endfor %}
+
+    <form action="{{ path('administration_current_box_choosing') }}" method="post">
+        <input type="text" name="validate_order" value="validate_order" hidden>
+        <button type="submit" class="btn">Validate Box</button>
+    </form>
+
+    {% endif %}
+{% else %}
+
+    <p>No box yet! :'(</p>
+{% endif %}
+
+
+

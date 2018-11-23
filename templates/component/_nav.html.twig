@@ -1,0 +1,62 @@
+ <nav class="navbar navbar-expand-lg navbar-danger bg-light">
+        <a class="navbar-brand" href="{{ path('index') }}"><img src="{{ asset('images/sutekina-logo.jpg') }}" alt="Sutekina-logo" style="height: 90px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Subscribe</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Gift-it</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Previous Boxes</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Concept</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('index_test') }}">Test</a>
+                </li>
+
+            </ul>
+
+
+
+            <form class="form-inline my-2 my-lg-0">
+                <ul class="navbar-nav mr-auto">
+
+                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+
+                    <li class="nav-item mr-2">
+                        <button class="btn btn-success" id="btn-login"><a href="#">Mon Compte</a></button>
+                    </li>
+                    <li class="nav-item mr-2">
+                        <button class="btn btn-success" id="btn-login"><a href="{{ path('administration_main') }}">Administration</a></button>
+                    </li>
+
+                {% else %}
+
+                    <li class="nav-item mr-2">
+                        <button class="btn btn-success" id="btn-login"><a href="{{ path('user_register') }}">Register</a></button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-info" id="btn-login"><a href="{{ path('security_login') }}">Login</a></button>
+                    </li>
+
+
+                {% endif %}
+                </ul>
+            </form>
+
+
+        </div>
+    </nav>

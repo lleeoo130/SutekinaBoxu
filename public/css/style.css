@@ -1,0 +1,24 @@
+
+.navbar.bg-light, .jumbotron, .btn{
+    border-color: hotpink;
+}
+
+button#btn-login, button.btn{
+    border-color: deeppink;
+    background-color: lightpink;
+}
+
+.form-control{
+    border-color: deeppink;
+    background-color: lightpink;
+}
+
+.form-control:focus{
+    border-color: #ff97e5;
+    background-color: #ffdbe9;
+}
+
+.form-control::placeholder{
+    color: white;
+}
+

@@ -1,0 +1,25 @@
+{% extends 'admin/current_box.html.twig' %}
+
+{% block content %}
+    {{ parent() }}
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <form action="{{ path('administration_current_box_product_manager') }}" method="post">
+                <input type="text" name="arrived" value="arrived" hidden>
+                <button>Order has arrived</button></form>
+        </div>
+        <div class="col-md-6">
+            <form action="{{ path('administration_current_box_product_manager') }}" method="post">
+                <input type="text" name="validated" value="validated" hidden>
+                <button>Order is valid</button></form>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block page_title %}
+    Review
+{% endblock %}
+

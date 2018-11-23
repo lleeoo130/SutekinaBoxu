@@ -1,0 +1,30 @@
+{% extends 'admin/current_box.html.twig' %}
+
+{% block page_title %}
+    Choosing Products
+{% endblock %}
+
+{% block content %}
+    {{ parent() }}
+    <hr>
+    <hr>
+
+    <div class="row">
+
+        <div class="col-md-4">
+
+            {{ form(form) }}
+
+        </div>
+
+        <div class="col-md-8">
+
+            {% include 'admin/_current_box.html.twig' %}
+
+        </div>
+
+    </div>
+{% endblock %}
+
+
+

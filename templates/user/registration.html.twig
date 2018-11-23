@@ -1,0 +1,38 @@
+{% extends "layout.html.twig" %}
+
+
+{% block page_title 'Register' %}
+
+
+{% block content %}
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card p-2">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{{ asset('images/register-nekko.jpg') }}" alt="" style="max-width: 90%">
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="mt-4 my-auto">Register now and enjoy some dope-as Sukina content!</h3>
+                        <p class="lead text-right">Oh, yeah!</p>
+                    </div>
+                </div>
+
+                <hr class="pb-1">
+
+                    {{ form(form) }}
+            </div>
+        </div>
+
+
+            <div class="col-md-6">
+                <img src="{{ asset('images/sutekina-register.jpg') }}" alt="" style="max-width: 100%">
+            </div>
+
+
+    </div>
+
+{% endblock %}
+
+
+

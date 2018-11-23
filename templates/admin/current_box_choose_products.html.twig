@@ -1,0 +1,41 @@
+{% extends 'admin/current_box.html.twig' %}
+
+{% block page_title %}
+    Choosing Products
+{% endblock %}
+
+{% block content %}
+    {{ parent() }}
+    <hr>
+    <hr>
+
+    <div class="row">
+
+        <div class="col-md-4">
+
+            <h3>Cool items we can order</h3>
+
+            <form action="{{ path('administration_current_box_choosing') }}" style="text-align: left; margin-left: 50px" method="post">
+
+            {% for product in products %}
+                <div class="form-check">
+                    <input type="checkbox" name="{{ product.reference }}" class="form-check-input">
+                    <label for="itemname" class="form-check-label">{{ product.name }} - {{ product.price }} $</label>
+                </div>
+            {% endfor %}
+
+                <button type="submit" class="btn btn-primary">Add to box</button>
+            </form>
+        </div>
+
+        <div class="col-md-8">
+
+            {% include 'admin/_current_box.html.twig' %}
+
+        </div>
+
+    </div>
+{% endblock %}
+
+
+

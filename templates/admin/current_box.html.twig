@@ -1,0 +1,33 @@
+{% extends "admin/main.html.twig" %}
+
+
+{% block content %}
+    {{ parent() }}
+
+
+    <table class="table">
+        <thead>
+            <th scope="col" colspan="2">Status</th>
+            <th scope="col">Product Choice</th>
+            <th scope="col">Product Received</th>
+            <th scope="col">Box Sent</th>
+        </thead>
+        <tbody>
+        <tr>
+            <td colspan="2">Delivered</td>
+            <td><a href="{{ path('administration_current_box_choosing') }}">Choose Products</a></td>
+            <td><a href="{{ path('administration_current_box_product_manager') }}">Product Control</a></td>
+            <td><a href="#">Approve distribution</a></td>
+        </tr>
+        <tr>
+            <td colspan="2"></td>
+            <td>Status</td>
+            <td>Status</td>
+            <td>Status</td>
+        </tr>
+        </tbody>
+    </table>
+
+{% endblock %}
+
+

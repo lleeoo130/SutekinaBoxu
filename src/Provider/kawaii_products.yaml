@@ -1,0 +1,30 @@
+products:
+  kawaii_nekko:
+    reference: kawaii_nekko
+    name: Kawaii Nekko
+    price: 5
+    units: 1000
+
+  kawaii_doll:
+    reference: kawaii_doll
+    name: Kawaii Doru
+    price: 10
+    units: 1000
+
+  kawaii_egg:
+    reference: kawaii_egg
+    name: Kawaii Tamago
+    price: 5
+    units: 1000
+
+  kawaii_poster:
+    reference: kawaii_poster
+    name: Posteru
+    price: 2
+    units: 1000
+
+  kawaii_bag:
+    reference: kawaii_bag
+    name: Kawaii Bagu
+    price: 3
+    units: 1000

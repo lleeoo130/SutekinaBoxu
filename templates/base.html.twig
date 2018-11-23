@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{#
+  ____        _       _    _               ____
+ / ___| _   _| |_ ___| | _(_)_ __   __ _  | __ )  _____  __
+ \___ \| | | | __/ _ \ |/ / | '_ \ / _` | |  _ \ / _ \ \/ /
+  ___) | |_| | ||  __/   <| | | | | (_| | | |_) | (_) >  <
+ |____/ \__,_|\__\___|_|\_\_|_| |_|\__,_| |____/ \___/_/\_\
+
+#}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            {% block title %}
+                {% block page_title '' %}
+                |
+                {% block site_title 'SutekinaBox' %}
+            {% endblock %}
+        </title>
+        {% block stylesheets %}
+        {% endblock %}
+        {% block favicon %}
+
+        {% endblock %}
+
+    </head>
+    <body>
+        {% block body %}
+        {% endblock %}
+        {% block javascripts %}
+        {% endblock %}
+    </body>
+
+
+</html>

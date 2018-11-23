@@ -1,0 +1,5 @@
+* Rajoute boutton pour rejeter la commande recue
+* faire la vue de validation finale
+* rajouter icones etcc pour visuel
+* CSS beaugossification
+*

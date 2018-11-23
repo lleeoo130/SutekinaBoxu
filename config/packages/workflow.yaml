@@ -1,0 +1,36 @@
+framework:
+    workflows:
+        box_tracking:
+            type: 'workflow'
+            audit_trail:
+                enabled: true
+            marking_store:
+                type: 'single_state'
+                arguments:
+                    - 'currentPlace'
+            supports:
+                    - App\Entity\Box
+            initial_place: waiting_to_order
+            places:
+                - waiting_to_order
+                - ordered
+                - received
+                - approved
+                - ready_to_send
+
+            transitions:
+                order_passed:
+                    from: waiting_to_order
+                    to: ordered
+                order_received:
+                    from: ordered
+                    to: received
+                order_approved:
+                    from: received
+                    to: approved
+                order_refused:
+                    from: received
+                    to: waiting_to_order
+                ready_to_distribute:
+                    from: approved
+                    to: ready_to_send
